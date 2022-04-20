@@ -8,7 +8,7 @@ Scenario:
 
 Description: The servers of Microsoft Windows provide support for sharing resources, such as files and print services over a network. This service is vulnerable to remote code execution, and NetAPI32.dll is the cause of this vulnerability.
 
-While windows process a directory traversal (maker) character sequence in path names, there is an error generated in NetAPI32.dll. The vulnerability could be exploited by corrupting stack memory. An example would be sending RPC requests that contain specially crafted (made) path names to the server service component(SRVSVC). The result cause buffer overflow in target memory and finally full access to the command shell of the target machine.
+While windows process a directory traversal (maker) character sequence in path names, there is an error generated in NetAPI32.dll. The vulnerability could be exploited by corrupting stack memory. An example would be sending RPC requests that contain specially crafted (made) path names to the server service component(SRVSVC). The result cause buffer overflow in memory and finally gives full access to the command shell of the target machine.
 
 First, identify that the target Windows is vulnerable to MS08-067 or not. Open your terminal and enter the following Nmap command: 
   
